@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Carousel() {
   return (
@@ -12,10 +13,12 @@ export default function Carousel() {
                 href=""
                 className="group relative flex flex-col overflow-hidden rounded-lg"
               >
-                <img
-                  src="p1.png"
+                <Image
+                  src="/p1.png" // Ensure this file is in the `public` folder
                   alt="Pizza 1"
-                  className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  width={350}
+                  height={350}
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/10"></div>
                 <h3 className="z-10 text-3xl font-semibold text-white absolute top-0 left-0 p-6 sm:text-2xl">
@@ -30,10 +33,12 @@ export default function Carousel() {
                 href=""
                 className="group relative flex flex-col overflow-hidden rounded-lg"
               >
-                <img
-                  src="p2.png"
+                <Image
+                  src="/p2.png" // Ensure this file is in the `public` folder
                   alt="Pizza 2"
-                  className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  width={350}
+                  height={350}
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/10"></div>
                 <h3 className="z-10 text-3xl font-semibold text-white absolute top-0 left-0 p-6 sm:text-2xl">
@@ -48,10 +53,12 @@ export default function Carousel() {
                 href=""
                 className="group relative flex flex-col overflow-hidden rounded-lg"
               >
-                <img
-                  src="p3.jpg"
+                <Image
+                  src="/p3.jpg" // Ensure this file is in the `public` folder
                   alt="Pizza 3"
-                  className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  width={350}
+                  height={350}
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-gray-900/10"></div>
                 <h3 className="z-10 text-3xl font-semibold text-white absolute top-0 left-0 p-6 sm:text-2xl">

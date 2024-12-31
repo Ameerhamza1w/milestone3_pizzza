@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -24,16 +25,40 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex justify-center space-x-6 mb-6 flex-wrap gap-4">
             <a href="/" target="_blank" rel="nofollow noopener">
-              <img src="fb.png" alt="Facebook" className="h-12 w-12 object-contain hover:scale-110 transition-transform duration-300" />
+              <Image
+                src="/fb.png" // Ensure this file is in the `public` folder
+                alt="Facebook"
+                width={48}
+                height={48}
+                className="object-contain hover:scale-110 transition-transform duration-300"
+              />
             </a>
             <a href="https://www.linkedin.com/in/ameerhamzamemon" target="_blank" rel="nofollow noopener">
-              <img src="lin.webp" alt="LinkedIn" className="h-12 w-12 object-contain hover:scale-110 transition-transform duration-300" />
+              <Image
+                src="/lin.webp" // Ensure this file is in the `public` folder
+                alt="LinkedIn"
+                width={48}
+                height={48}
+                className="object-contain hover:scale-110 transition-transform duration-300"
+              />
             </a>
             <a href="/" target="_blank" rel="nofollow noopener">
-              <img src="insta.webp" alt="Instagram" className="h-12 w-12 object-contain hover:scale-110 transition-transform duration-300" />
+              <Image
+                src="/insta.webp" // Ensure this file is in the `public` folder
+                alt="Instagram"
+                width={48}
+                height={48}
+                className="object-contain hover:scale-110 transition-transform duration-300"
+              />
             </a>
             <a href="/" target="_blank" rel="nofollow noopener">
-              <img src="tt.png" alt="Twitter" className="h-12 w-12 object-contain hover:scale-110 transition-transform duration-300" />
+              <Image
+                src="/tt.png" // Ensure this file is in the `public` folder
+                alt="Twitter"
+                width={48}
+                height={48}
+                className="object-contain hover:scale-110 transition-transform duration-300"
+              />
             </a>
           </div>
 

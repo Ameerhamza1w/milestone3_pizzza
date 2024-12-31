@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ProductCard from "./ProductCard";
 import { Product } from "@/pages/types";
+import Image from "next/image";  // Import next/image
 
 const Menuitem = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -17,7 +18,6 @@ const Menuitem = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch("/api/products");
-
 
         if (!response.ok) {
           throw new Error(`Failed to fetch products: ${response.status} ${response.statusText}`);
@@ -121,10 +121,13 @@ const Menuitem = () => {
                         key={index}
                         className="flex items-center justify-between mb-6 p-4 rounded-lg bg-gray-100 shadow-md"
                       >
-                        <img
-                          src={product.image}
+                        {/* Replaced <img> with <Image> */}
+                        <Image
+                          src={product.image}  // Ensure this image path is correct
                           alt={product.name}
-                          className="w-20 h-20 sm:w-24 inline-block rounded-lg"
+                          width={80}  // Adjust the width and height based on the design
+                          height={80}
+                          className="inline-block rounded-lg"
                         />
                         <span className="ml-4 text-lg font-medium text-gray-600">
                           {product.name} - ${product.price}

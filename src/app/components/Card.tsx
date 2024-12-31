@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const FloatingImageContentBlock = () => {
   return (
@@ -19,15 +20,12 @@ const FloatingImageContentBlock = () => {
           <li className="text-white">
             <strong>BBQ Chicken Pizza:</strong> A mouthwatering blend of tender BBQ chicken, cheddar cheese, and tangy BBQ sauce.
           </li>
-
           <li className="text-white">
             <strong>Mushroom Supreme Pizza:</strong> Juicy mushrooms, extra cheese, and a rich, savory base for the perfect flavor.
           </li>
-
           <li className="text-white">
             <strong>Spicy Tikka Pizza:</strong> A flavorful blend of spicy tikka marinated chicken, topped with zesty spices and creamy cheese.
           </li>
-
           <li className="text-white">
             <strong>Smoked BBQ Delight Pizza:</strong> A rich smoky BBQ flavor combined with succulent grilled chicken and cheddar cheese.
           </li>
@@ -35,10 +33,12 @@ const FloatingImageContentBlock = () => {
       </div>
 
       <div className="md:w-1/2 mt-6 md:mt-0">
-        <img
-          src="77.png"
+        <Image
+          src="/77.png" // Ensure the image is in the `public` folder
           alt="Delicious Pizza"
-          className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105 mx-auto"
+          width={500}
+          height={400}
+          className="rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105 mx-auto"
         />
       </div>
     </section>

@@ -1,14 +1,20 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-black to-gray-900 font-sans px-6 py-24 mb-10">
-      {/* Background Image with Blur and Reduced Opacity */}
+      {/* Background Overlay */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
-      <img
+
+      {/* Optimized Image */}
+      <Image
         src="https://media.istockphoto.com/id/1456350579/photo/neapalitan-pizza-with-tomatoes-on-a-white-background.jpg?s=1024x1024&w=is&k=20&c=bGF8JsYprIxkt0NriQhkYo-I5NKVAlMXn-0LBXLdWMg="
         alt="pizza"
-        className="w-full h-full object-cover absolute inset-0 blur-sm opacity-60"
+        layout="fill"
+        objectFit="cover"
+        className="blur-sm opacity-60"
+        priority
       />
 
       {/* Banner Content */}
